@@ -6,6 +6,7 @@ using CheeseMVC.Data;
 using CheeseMVC.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using CheeseMVC.ViewModels;
 
 namespace CheeseMVC.Controllers
 {
@@ -44,7 +45,7 @@ namespace CheeseMVC.Controllers
                 context.Menus.Add(newMenu);
                 context.SaveChanges();
 
-                return Redirect ("Menu");
+                return Redirect ("/Menu");
             }
         
             return View(addMenuViewModel);
